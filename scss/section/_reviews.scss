@@ -1,0 +1,89 @@
+.reviews__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews__item {
+    width: 25%;
+    height: 50%;
+    position: relative;
+}
+
+.review {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &:hover .review__overlay {
+        background: rgba(#141414, .7);
+        opacity: 1;
+    }
+
+    &:hover .review__descr {
+        transform: scale(1);
+    }
+}
+
+.review__photo {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+
+@each $review in (1, 2, 3, 4, 5, 6, 7, 8) {
+    .review__photo_#{$review} {
+        background: url('../img/content/reviews/review_#{$review}.jpg') no-repeat center / cover;
+    }
+}
+
+.review__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-size: rem(14px);
+    transition: .5s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+
+.review__descr {
+    width: 80%;
+    margin: 0 auto;
+    transform: scale(.7);
+    transition: .5s;
+}
+
+.review__title {
+    @include gagalin();
+    text-transform: uppercase;
+    margin-bottom: rem(20px);
+}
+
+.review__short-text {
+    @include ubuntu(light);
+    margin-bottom: rem(16px);
+}
+
+.review__more-btn {
+    display: inline-block;
+    padding: rem(10px) rem(10px);
+    border-radius: rem(5px);
+    @include ubuntu(medium);
+    font-size: rem(13px);
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: $dark;
+    transition: .5s;
+
+    &:hover {
+        background: #1f2122;
+    }
+}

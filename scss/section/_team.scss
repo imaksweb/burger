@@ -1,0 +1,14 @@
+.team {
+    position: relative;
+    background: url('../img/bg/team_bg.jpg') no-repeat center top / cover;
+    height: 100%;
+    display: none;
+}
+
+.team__content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background: rgba($dark, .93);
+}
