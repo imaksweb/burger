@@ -2,13 +2,101 @@
     position: relative;
     background: url('../img/bg/team_bg.jpg') no-repeat center top / cover;
     height: 100%;
-    display: none;
+
+    .section__title {
+        margin-bottom: rem(78px);
+    }
 }
 
-.team__content {
+.team__wrap {
     position: absolute;
     width: 50%;
     height: 100%;
     right: 0;
     background: rgba($dark, .93);
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
 }
+
+.team-accordeon__item {
+    margin-bottom: rem(36px);
+}
+
+.team-accordeon__item_active .team-accordeon__content {
+    display: flex;
+}
+
+.team-accordeon__item_active .team-accordeon__trigger {
+    color: $yellow;
+    
+    &:before {
+        border-top: 0 solid transparent;
+        border-bottom: rem(7px) solid $yellow;
+    }
+}
+
+.team-accordeon__trigger {
+    @include gagalin();
+    font-size: rem(14px);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: rem(16px);
+    position: relative;
+    padding-left: rem(10px);
+
+    &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: rem(7px) solid $yellow;
+        border-right: rem(5px) solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: rem(5px) solid transparent;
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.team-accordeon__content {
+    display: none;
+}
+
+.team-accordeon__content_active {
+    display: flex;
+}
+
+.team-accordeon__member {
+    width: 30%;
+    text-align: center;
+}
+
+.team-accordeon__img {
+    display: inline-block;
+    vertical-align: top;
+    width: rem(100px);
+    height: rem(100px);
+    background: url('../img/content/crew.jpg') no-repeat center / cover;
+    border-radius: 50%;
+}
+
+.team-accordeon__descr {
+    width: 70%;
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.team-accordeon__title {
+    @include ubuntu(bold);
+    margin-bottom: rem(20px);
+}
+
+.team-accordeon__text {
+    @include ubuntu(light);
+}
+

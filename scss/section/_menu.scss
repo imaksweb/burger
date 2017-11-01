@@ -1,0 +1,56 @@
+.menu {
+    position: relative;
+    background: url('../img/bg/menu_bg.jpg') no-repeat center / cover;
+
+    .section__title {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+}
+
+.menu-accordeon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+
+@each $item in ('meat', 'vegan', 'diet') {
+    .menu-accordeon__trigger_#{$item} {
+        background: url('../img/bg/menu/#{$item}_menu.jpg') no-repeat center / cover;
+    }
+}
+
+.menu-accordeon__trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    width: rem(80px);
+    height: 100%;
+}
+
+.menu-accordeon__trigger-title {
+    @include gagalin();
+    font-size: rem(40px);
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    position: absolute;
+}
+
+.menu-accordeon__content {
+    height: 100%;
+    overflow: hidden;
+    background: rgba($dark, .93);
+    display: none;
+}
+
+.menu-accordeon__text {
+    @include ubuntu(light);
+    font-size: rem(14px);
+    color: #fff;
+}
+

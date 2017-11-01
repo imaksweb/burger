@@ -1,6 +1,10 @@
 .intro {
     background: url('../img/bg/intro_bg.jpg') no-repeat center / cover;
     position: relative;
+
+    .section__title {
+        padding-top: rem(60px);
+    }
 }
 
 .header {
@@ -96,4 +100,18 @@
     &:hover {
         transform: scale(1.2);
     }
+}
+
+.intro__scroll-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(40px);
+    height: rem(40px);
+}
+
+.intro__icon {
+    width: rem(30px);
+    height: rem(30px);
+    fill: #fff;
 }

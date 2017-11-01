@@ -47,12 +47,22 @@
 }
 
 .section__title {
-    color: $yellow;
     @include gagalin();
     font-size: rem(72px);
     line-height: 1.42;
     margin: 0;
-    padding-top: rem(60px);
+}
+
+.section__title_yellow {
+    color: $yellow;
+}
+
+.section__title_dark {
+    color: $dark;
+}
+
+.section__title_white {
+    color: #fff;
 }
 
 .text__block p {
