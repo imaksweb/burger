@@ -1364,7 +1364,7 @@ footer {
   width: 100%; }
 
 .form__input_text {
-  resize: none;
+  resize: vertical;
   height: 6.875rem; }
 
 .form__buttons-block {
