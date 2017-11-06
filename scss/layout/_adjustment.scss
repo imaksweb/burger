@@ -56,6 +56,10 @@
         color: #fff;
     }
 
+    @include tablets {
+        font-size: rem(68px);
+    }
+
     @include phones {
         font-size: rem(60px);
     }

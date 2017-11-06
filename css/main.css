@@ -475,7 +475,7 @@ footer {
   position: relative;
   width: 100%; }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -556,6 +556,9 @@ footer {
     color: #2f3234; }
   .section__title_white {
     color: #fff; }
+  @media screen and (max-width: 768px) {
+    .section__title {
+      font-size: 4.25rem; } }
   @media screen and (max-width: 480px) {
     .section__title {
       font-size: 3.75rem; } }
@@ -1351,7 +1354,8 @@ footer {
   font-weight: 300;
   font-size: 0.875rem;
   margin-bottom: 0.3125rem;
-  padding-left: 0.3125rem; }
+  padding-left: 0.3125rem;
+  display: block; }
 
 .form__input {
   border: none;
@@ -1379,52 +1383,62 @@ footer {
   -webkit-flex: 0;
   -ms-flex: 0;
   flex: 0; }
-  .form__buttons-block .form__radio-icon_checkbox {
-    border-radius: 0; }
 
-.form__radio {
-  position: absolute;
-  left: -9999px; }
-
-.form__radio-icon {
-  width: 1rem;
-  height: 1rem;
-  background: #fff;
-  border-radius: 50%;
-  margin-right: 0.625rem;
-  position: relative; }
-  .form__radio-icon:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: #e45028;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s; }
-
-.form__radio:checked + .form__radio-icon:after {
-  width: 0.5rem;
-  height: 0.5rem; }
-
-.form__radio:checked + .form__radio-icon_checkbox:after {
-  background: url("../img/icons/check.svg") no-repeat center;
-  background-size: contain;
-  width: 0.75rem;
-  height: 0.75rem; }
-
-.form__radio-title {
+.form__radio-label {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
-  color: #fff; }
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .form__radio-label:before {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    margin-right: 0.625rem; }
+  .form__radio-label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e45028;
+    opacity: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    top: 50%;
+    left: 8px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.form__checkbox-label:before {
+  border-radius: 0; }
+
+.form__checkbox-label:after {
+  border-radius: 0;
+  background: url("../img/icons/check.svg") no-repeat center center/cover;
+  width: 10px;
+  height: 10px; }
+
+.form__radio-input:checked + .form__radio-label:after {
+  opacity: 1; }
 
 .form__order-button {
   border: 0;

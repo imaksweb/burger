@@ -374,95 +374,86 @@
             </section>
 
             <section class="section order section_centered">
-                <div class="container">
+                <di class="container">
                     <div class="section__title">Закажите доставку</div>
-                    <div class="form">
+                    <di class="form">
                         <form action="" class="form__elem">
-                            <div class="form__content">
+                            <di class="form__content">
                                 <div class="form__col">
                                     <div class="form__row">
-                                        <label class="form__block">
-                                            <div class="form__block-title">
+                                        <div class="form__block">
+                                            <label for="name" class="form__block-title">
                                                 Имя
-                                            </div>
-                                            <input type="text" class="form__input">
-                                        </label>
-                                        <label class="form__block">
-                                            <div class="form__block-title">
+                                            </label>
+                                            <input type="text" class="form__input" id="name">
+                                        </div>
+                                        <div class="form__block">
+                                            <label for="tel" class="form__block-title">
                                                 Телефон
-                                            </div>
-                                            <input type="text" class="form__input">
-                                        </label>
+                                            </label>
+                                            <input type="text" class="form__input" id="tel">
+                                        </div>
                                     </div>
                                     <div class="form__row">
-                                        <label class="form__block">
-                                            <div class="form__block-title">
+                                        <div class="form__block">
+                                            <label for="street" class="form__block-title">
                                                 Улица
-                                            </div>
-                                            <input type="text" class="form__input">
-                                        </label>
+                                            </label>
+                                            <input type="text" class="form__input" id="street">
+                                        </div>
                                     </div>
                                     <div class="form__row">
-                                        <label class="form__block">
-                                            <div class="form__block-title">
+                                        <div class="form__block">
+                                            <label for="house" class="form__block-title">
                                                 Дом
-                                            </div>
-                                            <input type="text" class="form__input">
-                                        </label>
-                                        <label class="form__block">
-                                            <div class="form__block-title">
+                                            </label>
+                                            <input type="text" class="form__input" id="house">
+                                        </div>
+                                        <div class="form__block">
+                                            <label for="block" class="form__block-title">
                                                 Корпус
-                                            </div>
-                                            <input type="text" class="form__input">
-                                        </label>
-                                        <label class="form__block">
-                                            <div class="form__block-title">
+                                            </label>
+                                            <input type="text" class="form__input" id="block">
+                                        </div>
+                                        <div class="form__block">
+                                            <label for="room" class="form__block-title">
                                                 Квартира
-                                            </div>
-                                            <input type="text" class="form__input">
-                                        </label>
-                                        <label class="form__block">
-                                            <div class="form__block-title">
+                                            </label>
+                                            <input type="text" class="form__input" id="room">
+                                        </div>
+                                        <div class="form__block">
+                                            <label for="floor" class="form__block-title">
                                                 Этаж
-                                            </div>
-                                            <input type="text" class="form__input">
-                                        </label>
+                                            </label>
+                                            <input type="text" class="form__input" id="floor">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form__col">
                                     <div class="form__row">
-                                        <label class="form__block">
-                                            <div class="form__block-title">
+                                        <div class="form__block">
+                                            <label for="comments" class="form__block-title">
                                                 Комментарий
-                                            </div>
-                                            <textarea name="comment" class="form__input form__input_text" cols="30" rows="10"></textarea>
-                                        </label>
+                                            </label>
+                                            <textarea name="comment" id="comments" class="form__input form__input_text" cols="30" rows="10"></textarea>
+                                        </div>
                                     </div>
                                     <div class="form__buttons">
                                         <div class="form__row">
-                                            <label class="form__buttons-block">
-                                                <input type="radio" name="payment" class="form__radio">
-                                                <div class="form__radio-icon"></div>
-                                                <div class="form__radio-title">
-                                                    Потребуется сдача
-                                                </div>
-                                            </label>
-                                            <label class="form__buttons-block">
-                                                <input type="radio" name="payment" class="form__radio">
-                                                <div class="form__radio-icon"></div>
-                                                <div class="form__radio-title">
-                                                    Оплата по карте
-                                                </div>
-                                            </label>
+                                            <div class="form__buttons-block">
+                                                <input type="radio" name="payment" id="change" value="change" class="form__radio-input visually-hidden">
+                                                <label for="change" class="form__radio-label">Потребуется сдача</label>
+                                            </div>
+                                            <div class="form__buttons-block">
+                                                <input type="radio" name="payment" id="card" value="card" class="form__radio-input visually-hidden">
+                                                <label for="card" class="form__radio-label">Оплата картой</label>
+                                            </div>
                                         </div>
                                         <div class="form__row">
-                                            <label class="form__buttons-block">
-                                                <input type="checkbox" name="callback" class="form__radio">
-                                                <div class="form__radio-icon form__radio-icon_checkbox"></div>
-                                                <div class="form__radio-title">
-                                                    Не перезванивать
-                                                </div>
-                                            </label>
+                                            <div class="form__buttons-block">
+                                                <input type="checkbox" name="callback" id="callback" value="call" class="form__radio-input visually-hidden">
+                                                <label for="callback" class="form__radio-label form__checkbox-label">Не перезванивать</label>
+                                            </div>
                                         </div>
                                         <div class="form__row">
                                             <input type="submit" name="order" value="Заказать" class="form__order-button order-link">
@@ -470,10 +461,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </di>
                         </form>
-                    </div>
-                </div>
+                    </di>
+                </di>
             </section>
 
             <section class="section contacts">
