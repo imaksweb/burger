@@ -1513,7 +1513,8 @@ footer {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  text-decoration: none; }
   @media screen and (max-width: 480px) {
     .footer__tel {
       display: -webkit-inline-box;

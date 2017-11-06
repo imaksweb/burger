@@ -39,6 +39,7 @@
 .footer__tel {
     display: flex;
     align-items: center;
+    text-decoration: none;
 
     @include phones {
         display: inline-flex;
