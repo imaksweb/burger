@@ -1,0 +1,97 @@
+.contacts {
+    background: url('../img/bg/contacts_bg.jpg') no-repeat center / cover;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: rem(14px);
+    background: url('../img/bg/footer_bg.jpg') no-repeat center / cover;
+}
+
+.footer__container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: rem(10px) 0;
+
+    @include phones {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.footer__col {
+    flex: 1;
+
+    @include phones {
+        text-align: center;
+    }
+}
+
+.footer__address {
+    @include ubuntu(light);
+    color: #fff;
+    margin-bottom: rem(10px);
+}
+
+.footer__tel {
+    display: flex;
+    align-items: center;
+
+    @include phones {
+        display: inline-flex;
+        margin-bottom: rem(10px);
+    }
+}
+
+.footer__tel-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: rem(8px);
+    margin-bottom: rem(2px);
+}
+
+.footer__tel-icon {
+    width: rem(14px);
+    height: rem(12px);
+    fill: $orange;
+}
+
+.footer__tel-text {
+    color: $orange;
+    @include ubuntu(bold);
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socials__item {
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials__icon {
+    width: rem(20px);
+    height: rem(20px);
+    fill: #fff;
+    opacity: .3;
+    transition: .3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}

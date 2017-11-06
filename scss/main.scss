@@ -1,6 +1,7 @@
 // config
 @import "config/_variables";
 @import "config/_mixins";
+@import "config/_media";
 
 // base
 @import "layout/_fonts";
@@ -11,6 +12,9 @@
 // section
 @import "section/_intro";
 @import "section/_best";
-@import "section/_reviews";
 @import "section/_team";
 @import "section/_menu";
+@import "section/_reviews";
+@import "section/_order";
+@import "section/_contacts";
+

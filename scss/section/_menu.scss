@@ -1,11 +1,15 @@
 .menu {
     position: relative;
-    background: url('../img/bg/menu_bg.jpg') no-repeat center / cover;
+    @include bg('../img/bg/menu_bg.jpg');
 
     .section__title {
         position: absolute;
         top: 10%;
         left: 10%;
+
+        @include phones {
+            left: 5%;
+        }
     }
 }
 
@@ -17,13 +21,28 @@
     display: flex;
 }
 
-@each $item in ('meat', 'vegan', 'diet') {
-    .menu-accordeon__trigger_#{$item} {
-        background: url('../img/bg/menu/#{$item}_menu.jpg') no-repeat center / cover;
+.menu-accordeon__item {
+    height: 100%;
+    position: relative;
+    display: flex;
+
+    &_active {
+        .menu-accordeon__trigger {
+            color: $yellow;
+        }
+        
+        .menu-accordeon__content {
+            width: rem(550px);
+
+            @include tablets {
+                width: 100%;
+            }
+        }
     }
 }
 
 .menu-accordeon__trigger {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +50,14 @@
     color: #fff;
     width: rem(80px);
     height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include phones {
+        width: rem(60px);
+        align-items: flex-end;
+    }
 }
 
 .menu-accordeon__trigger-title {
@@ -39,18 +66,40 @@
     transform: rotate(-90deg);
     white-space: nowrap;
     position: absolute;
+
+    @include phones {
+        font-size: rem(30px);
+        transform: rotate(-90deg) translateX(50%);
+    }
 }
 
 .menu-accordeon__content {
+    width: 0;
     height: 100%;
     overflow: hidden;
+    top: -650px;
+    left: 0;
     background: rgba($dark, .93);
-    display: none;
+
+    @include phones {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: rem(30px);
+        text-align: center;
+    }
 }
 
 .menu-accordeon__text {
     @include ubuntu(light);
     font-size: rem(14px);
     color: #fff;
+    width: 100%;
+    line-height: 1.8;
+    padding: 15% 5%;
+
+    @include phones {
+        padding: 0 2%;
+    }
 }
 

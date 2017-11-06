@@ -5,7 +5,14 @@
     background-color: $color;
 }
 
+@mixin bg($path) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 // responsive
 @function rem($px) {
-    @return $px / $baseFont + 0rem;
+    @return $px / 16px + 0rem;
 }

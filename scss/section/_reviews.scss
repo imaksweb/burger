@@ -1,7 +1,3 @@
-.reviews {
-    // display: none;
-}
-
 .reviews__list {
     width: 100%;
     height: 100%;
@@ -13,33 +9,18 @@
     width: 25%;
     height: 50%;
     position: relative;
-}
-
-.review {
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-    &:hover .review__overlay {
-        background: rgba(#141414, .7);
-        opacity: 1;
-    }
-
-    &:hover .review__descr {
-        transform: scale(1);
-    }
-}
-
-.review__photo {
-    width: 100%;
-    height: 100%;
     filter: grayscale(100%);
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
+
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
 }
 
-.review__overlay {
+.review__hover {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -47,11 +28,24 @@
     right: 0;
     color: #fff;
     font-size: rem(14px);
-    transition: .5s;
+    transition: .4s;
     width: 100%;
     display: flex;
     align-items: center;
     opacity: 0;
+
+    &:hover {
+        background: rgba(#141414, .7);
+        opacity: 1;
+    }
+
+    &:hover .review__descr {
+        transform: scale(1);
+    }
+
+    @include tablets {
+        font-size: rem(12px);
+    }
 }
 
 .review__descr {
@@ -59,6 +53,11 @@
     margin: 0 auto;
     transform: scale(.7);
     transition: .5s;
+
+    @include tablets {
+        width: 95%;
+        text-align: center;
+    }
 }
 
 .review__title {
@@ -70,6 +69,10 @@
 .review__short-text {
     @include ubuntu(light);
     margin-bottom: rem(16px);
+
+    @include phones {
+        display: none;
+    }
 }
 
 .review__more-btn {
@@ -86,5 +89,10 @@
 
     &:hover {
         background: #1f2122;
+    }
+
+    @include tablets {
+        padding: rem(8px) rem(8px);
+        font-size: rem(11px);
     }
 }
