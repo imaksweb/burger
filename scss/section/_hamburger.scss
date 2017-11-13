@@ -1,0 +1,44 @@
+.hamburger-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($dark, .99);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: .35s;
+
+    &_active {
+        opacity: .98;
+        visibility: visible;
+    }
+}
+
+.hamburger-menu__items {
+    height: 100%;
+
+    .nav {
+        height: 100%;
+    }
+}
+
+.nav__list_hamburger {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav__item_hamburger {
+    flex-direction: column;
+
+    &:after {
+        margin: rem(16px) 0;
+    }
+
+    .nav__link {
+        font-size: rem(20px);
+    }
+}

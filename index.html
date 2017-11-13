@@ -48,9 +48,11 @@
                         </div>
                         <div class="header__btns">
                             <a href="#" class="order-link">Заказать</a>
-                            <a href="#" class="hamburger-menu">
-                                <div class="hamburger-menu__bars"></div>
-                            </a>
+                            <div class="hamburger-menu__trigger" id="hamburger-menu_toggle">
+                                <span class="hamburger-menu__bar hamburger-menu__bar_top"></span>
+                                <span class="hamburger-menu__bar hamburger-menu__bar_middle"></span>
+                                <span class="hamburger-menu__bar hamburger-menu__bar_bottom"></span>
+                            </div>
                         </div>
                     </header>
                     <div class="intro__content">
@@ -120,6 +122,146 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </section>
+
+            <section class="section burgers">
+                <div class="container">
+                    <div class="burgers__slider-wrap">
+                        <ul class="burgers-slider">
+                            <li class="burgers-slider__item">
+                                <div class="burger-ingredients">
+                                    <svg class="burger-ingredients__icon">
+                                        <use xlink:href="img/sprite/sprite.svg#burger" />
+                                    </svg>
+                                    <div class="burger-ingredients__text">
+                                        состав
+                                    </div>
+                                    <ul class="burger-ingredients__dropdown">
+                                        <li class="dropdown__row">
+                                            <div class="dropdown__pic">
+                                                <svg class="dropdown__icon">
+                                                    <use xlink:href="img/sprite/sprite.svg#beef" />
+                                                </svg>
+                                            </div>
+                                            <div class="dropdown__text">
+                                                Говядина
+                                            </div>
+                                            <div class="dropdown__weight">
+                                                300 г
+                                            </div>
+                                        </li>
+                                        <li class="dropdown__row">
+                                            <div class="dropdown__pic">
+                                                <svg class="dropdown__icon">
+                                                    <use xlink:href="img/sprite/sprite.svg#buns" />
+                                                </svg>
+                                            </div>
+                                            <div class="dropdown__text">
+                                                Булочки
+                                            </div>
+                                            <div class="dropdown__weight">
+                                                100 г
+                                            </div>
+                                        </li>
+                                        <li class="dropdown__row">
+                                            <div class="dropdown__pic">
+                                                <svg class="dropdown__icon">
+                                                    <use xlink:href="img/sprite/sprite.svg#salad" />
+                                                </svg>
+                                            </div>
+                                            <div class="dropdown__text">
+                                                Зелень
+                                            </div>
+                                            <div class="dropdown__weight">
+                                                70 г
+                                            </div>
+                                        </li>
+                                        <li class="dropdown__row">
+                                            <div class="dropdown__pic">
+                                                <svg class="dropdown__icon">
+                                                    <use xlink:href="img/sprite/sprite.svg#sauce" />
+                                                </svg>
+                                            </div>
+                                            <div class="dropdown__text">
+                                                Соус
+                                            </div>
+                                            <div class="dropdown__weight">
+                                                150 г
+                                            </div>
+                                        </li>
+                                        <li class="dropdown__row">
+                                            <div class="dropdown__pic">
+                                                <svg class="dropdown__icon">
+                                                    <use xlink:href="img/sprite/sprite.svg#cucumber" />
+                                                </svg>
+                                            </div>
+                                            <div class="dropdown__text">
+                                                Овощи
+                                            </div>
+                                            <div class="dropdown__weight">
+                                                200 г
+                                            </div>
+                                        </li>
+                                        <li class="dropdown__row">
+                                            <div class="dropdown__pic">
+                                                <svg class="dropdown__icon">
+                                                    <use xlink:href="img/sprite/sprite.svg#cheese" />
+                                                </svg>
+                                            </div>
+                                            <div class="dropdown__text">
+                                                Сыр
+                                            </div>
+                                            <div class="dropdown__weight">
+                                                80 г
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>                           
+                                <div class="burgers-slider__col burgers-slider__col_left">
+                                    <div class="burgers-slider__pic">
+                                        <img src="img/content/burgers/burger1.png" class="burgers-slider__pic-img" alt="">
+                                    </div>
+                                </div>
+                                <div class="burgers-slider__col burgers-slider__col_right">
+                                    <div class="section__title section__title_white burgers__title">
+                                        dark beef burger
+                                    </div>
+                                    <div class="burgers-slider__descr">
+                                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </div>
+                                    <div class="burgers-slider__order">
+                                        <div class="burgers-slider__price">
+                                            500<span class="burgers-slider__price-units">рублей</span>
+                                        </div>
+                                        <div class="burgers-slider__order-btn">
+                                            <a href="#" class="order-link">Заказать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="burgers__kkal">                               
+                                    <div class="burgers__kkal-weight">
+                                        <div class="burgers__kkal-amount">
+                                            1200
+                                        </div>
+                                    </div>
+                                    <div class="burgers__kkal-text">
+                                        ккал
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="burgers-slider__prev-slide">
+                            <svg class="arrow__icon">
+                                <use xlink:href="img/sprite/sprite.svg#arrow-scroll" />
+                            </svg>
+                        </a>
+                        <a href="#" class="burgers-slider__next-slide">
+                            <svg class="arrow__icon">
+                                <use xlink:href="img/sprite/sprite.svg#arrow-scroll" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -374,11 +516,11 @@
             </section>
 
             <section class="section order section_centered">
-                <di class="container">
+                <div class="container">
                     <div class="section__title">Закажите доставку</div>
-                    <di class="form">
+                    <div class="form">
                         <form action="" class="form__elem">
-                            <di class="form__content">
+                            <div class="form__content">
                                 <div class="form__col">
                                     <div class="form__row">
                                         <div class="form__block">
@@ -461,10 +603,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </di>
+                            </div>
                         </form>
-                    </di>
-                </di>
+                    </div>
+                </div>
             </section>
 
             <section class="section contacts">
@@ -522,9 +664,37 @@
             </section>
 
         </div>
-        <ul class="fixed-menu">
-            
-        </ul>
     </div>
+    <div class="hamburger-menu" id="hamburger-menu_overlay">
+        <div class="hamburger-menu__items">
+            <nav class="nav">
+                <ul class="nav__list nav__list_hamburger">
+                    <li class="nav__item nav__item_hamburger">
+                        <a href="#" class="nav__link">о нас</a>
+                    </li>
+                    <li class="nav__item nav__item_hamburger">
+                        <a href="#" class="nav__link">бургеры</a>
+                    </li>
+                    <li class="nav__item nav__item_hamburger">
+                        <a href="#" class="nav__link">команда</a>
+                    </li>
+                    <li class="nav__item nav__item_hamburger">
+                        <a href="#" class="nav__link">меню</a>
+                    </li>
+                    <li class="nav__item nav__item_hamburger">
+                        <a href="#" class="nav__link">отзывы</a>
+                    </li>
+                    <li class="nav__item nav__item_hamburger">
+                        <a href="#" class="nav__link">контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <ul class="fixed-menu">
+            
+    </ul>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -42,7 +42,6 @@
 }
 
 .menu-accordeon__trigger {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,9 +62,9 @@
 .menu-accordeon__trigger-title {
     @include gagalin();
     font-size: rem(40px);
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateX(-100%);
     white-space: nowrap;
-    position: absolute;
+    width: 100%;
 
     @include phones {
         font-size: rem(30px);
@@ -77,8 +76,6 @@
     width: 0;
     height: 100%;
     overflow: hidden;
-    top: -650px;
-    left: 0;
     background: rgba($dark, .93);
 
     @include phones {
