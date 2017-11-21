@@ -1,3 +1,8 @@
+// vendors
+@import "vendors/jquery.fancybox";
+@import "vendors/slick";
+@import "vendors/slick-theme";
+
 // config
 @import "config/_variables";
 @import "config/_mixins";
@@ -19,4 +24,5 @@
 @import "section/_order";
 @import "section/_contacts";
 @import "section/_hamburger";
-
+@import "section/_pagination";
+@import "section/_fixed-menu";

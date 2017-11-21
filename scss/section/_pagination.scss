@@ -1,0 +1,9 @@
+.onepage-pagination li a:before {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+}
+
+.onepage-pagination li a.active:before {
+    border-color: #fff;
+}

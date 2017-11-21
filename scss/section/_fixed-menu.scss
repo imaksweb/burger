@@ -1,0 +1,36 @@
+.fixed-menu {
+    position: fixed;
+    top: 25%;
+    right: 5%;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.fixed-menu__item_active {
+    .fixed-menu__link {
+        border-color: #fff;
+    }
+}
+
+.fixed-menu__link {
+    width: 16px;
+    height: 16px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  1s;
+
+    &:after {
+        content: '';
+        @include circle(6px, #fff);
+    }
+
+    &:hover {
+        border-color: #fff;
+    }
+}

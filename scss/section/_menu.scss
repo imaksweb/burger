@@ -30,14 +30,6 @@
         .menu-accordeon__trigger {
             color: $yellow;
         }
-        
-        .menu-accordeon__content {
-            width: rem(530px);
-
-            @include tablets {
-                width: 100%;
-            }
-        }
     }
 }
 
@@ -77,6 +69,7 @@
     height: 100%;
     overflow: hidden;
     background: rgba($dark, .93);
+    transition: width .5s;
 
     @include phones {
         display: flex;
@@ -91,9 +84,10 @@
     @include ubuntu(light);
     font-size: rem(14px);
     color: #fff;
-    width: 100%;
     line-height: 1.8;
     padding: 15% 5%;
+    transition: .5s;
+    opacity: 0;
 
     @include phones {
         padding: 0 2%;

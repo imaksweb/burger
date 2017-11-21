@@ -97,7 +97,7 @@
     position: relative;
 
     @include tablets {
-        display: block;
+        display: flex;
     }
 }
 
@@ -207,14 +207,14 @@
     overflow: hidden;
 
     &:hover {
-        .arrow__icon {
+        .arrow-icon {
             transform: scale(1.2);
         }
         
     }
 }
 
-.arrow__icon {
+.arrow-icon {
     fill: #fff;
     display: inline-block;
     width: rem(30px);

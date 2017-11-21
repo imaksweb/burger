@@ -4,67 +4,42 @@
     align-items: center;
 }
 
-.burgers__slider-wrap {
-    position: relative;
-}
-
-.burgers-slider {
-    padding: 0 rem(20px);    
+.slick-initialized .slick-slide {
+    display: flex;
 }
 
 .burgers-slider__item {
     display: flex;
     position: relative;
-    padding-top: rem(22px);
-    padding-bottom: rem(90px);
+    padding: rem(30px) 0;
+    outline: none;
 
     @include tablets {
         flex-direction: column;
-        padding: rem(85px) 0 0;
+        padding: 0;
+    }
+
+    @include phones {
+        padding: rem(50px) 0;
     }
 }
 
 .burgers-slider__col {
-    display: flex;
     flex: 1;
 }
 
-.burgers-slider__col_left {
+.burgers-slider__col-left {
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
-
-    
-}
-
-.burgers-slider__pic {
-    @include tablets {
-        width: 100%;
-        text-align: center;
-    }
+    align-items: center;
 }
 
 .burgers-slider__pic-img {
     display: inline-block;
     max-width: 100%;
-
-    @include tablets {
-        max-width: 60%;
-    }
-
-    @include phones {
-        max-width: 80%;
-    }
 }
 
-.burgers-slider__col_right {
-    flex-direction: column;
-
-    @include phones {
-        padding: 0 10%;
-    }
-}
-
-.burgers__title {
+.burgers-slider__title {
     line-height: 1;
 
     @include tablets {
@@ -73,9 +48,10 @@
 }
 
 .burgers-slider__descr {
+    @include ubuntu(light);
     font-size: rem(14px);
     color: #fff;
-    line-height: 1.7;
+    line-height: 1.8;
 
     @include tablets {
         text-align: center;
@@ -93,8 +69,8 @@
 
 .burgers-slider__price {
     @include gagalin();
-    color: $orange;
     font-size: rem(72px);
+    color: $orange;
     margin-right: rem(30px);
 }
 
@@ -102,20 +78,12 @@
     font-size: rem(30px);
 }
 
-.burgers-slider__order-btn {
-    display: flex;
-    align-items: flex-end;
-}
-
-.burger-ingredients {
+.burgers-ingredients {
     width: rem(90px);
-    height: rem(90px);
-    border-radius: 10px;
-    background: rgba(#e35028, .4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-radius: rem(10px);
+    background: rgba($orange, .4);
+    text-align: center;
+    padding: rem(10px) 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -123,26 +91,24 @@
     transition: .5s;
 
     &:hover {
-      background: #e35028;
+        background: $orange;
 
-      & .burger-ingredients__dropdown {
-          visibility: visible;
-          opacity: 1;
-      }
+        & .burger-ingredients__dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
 
 .burger-ingredients__icon {
-    width: 46px;
-    height: 42px;
+    width: rem(46px);
+    height: rem(42px);
     fill: #fff;
 }
 
 .burger-ingredients__text {
     @include gagalin();
     color: #fff;
-    text-transform: uppercase;
-    margin-top: rem(5px);
 }
 
 .burger-ingredients__dropdown {
@@ -150,7 +116,7 @@
     border-radius: rem(10px);
     background: rgba(#fff, .9);
     position: absolute;
-    padding: rem(20px);
+    padding: rem(10px) rem(20px);
     top: 0;
     left: rem(90px);
     transition: opacity 1s;
@@ -163,13 +129,12 @@
     }
 }
 
-
 .dropdown__row {
     display: flex;
     font-size: rem(14px);
     justify-content: space-around;
     align-items: center;
-    margin-bottom: rem(15px);
+    margin-bottom: rem(10px);
 
     &:last-child {
         margin-bottom: 0;
@@ -249,34 +214,40 @@
     font-size: rem(14px);
 }
 
-.burgers-slider__prev-slide, .burgers-slider__next-slide {
+.reviews__arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: rem(40px);
+    height: rem(40px);
+    overflow: hidden;
     position: absolute;
-}
-
-.burgers-slider__prev-slide {
-    right: 98%;
     top: 50%;
-    transform: translateY(-50%);
+    z-index: 20;
 
-    .arrow__icon {
-        transform: rotate(90deg);
-    }
-
-    @include phones {
-        right: 95%;
+    &:hover {
+        .arrow-icon {
+            transform: scale(1.2);
+        }
+        
     }
 }
 
-.burgers-slider__next-slide {
+.reviews__arrows-next {
     left: 98%;
-    top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(-90deg);
 
-    .arrow__icon {
-        transform: rotate(-90deg);
+    @include tablets {
+        left: 90%;
     }
+}
 
-    @include phones {
-        left: 95%;
+.reviews__arrows-prev {
+    right: 98%;
+    transform: translateY(-50%) rotate(90deg);
+
+    @include tablets {
+        right: 90%;
     }
 }

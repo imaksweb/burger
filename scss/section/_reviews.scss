@@ -96,3 +96,38 @@
         font-size: rem(11px);
     }
 }
+
+.full-review {
+    display: none;
+    width: rem(480px);
+    border-radius: rem(10px);
+
+    @include tablets {
+        width: 50%;
+    }
+
+    @include phones {
+        width: 90%;
+    }
+}
+
+.full-review__title {
+    @include gagalin();
+    font-size: rem(14px);
+    color: $dark;
+    text-transform: uppercase;
+    margin-bottom: rem(20px);
+}
+
+.full-review__text {
+    @include ubuntu(light);
+    font-size: rem(14px);
+    color: $dark;
+    line-height: 1.8;
+}
+
+.fancybox-close-small {
+    &:after {
+        color: #ec8468;        
+    }
+}
