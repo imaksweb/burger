@@ -5,10 +5,10 @@ let menu = ((options) => {
     let body = document.querySelector('body');
 
     let _toggleMenu = () => {
-
+        
         button.classList.toggle('hamburger-menu__trigger_active');
         menu.classList.toggle('hamburger-menu_active');
-        body.classList.toggle('body_active-menu');
+        body.classList.toggle('body__active-menu');  
 
     }
 
@@ -151,8 +151,13 @@ $(function() {
         const $this = $(e.currentTarget);
         const sectionIndex = parseInt($this.attr('data-scroll-to'));
 
+        const hamburgerIcon = $('#hamburger-menu_toggle');
+        const hamburgerMenu = $('#hamburger-menu_overlay');
+
         performTransition(sectionIndex);
 
+        hamburgerIcon.removeClass('hamburger-menu__trigger_active');
+        hamburgerMenu.removeClass('hamburger-menu_active');
 
     });
 
@@ -275,6 +280,8 @@ function initMap() {
     ]
     
   });
+
+//   google.maps.event.addDomListener(window, 'load', mapGoogle.init);
 
   let icons = {
       position: {
