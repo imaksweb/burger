@@ -171,7 +171,6 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
     center: uluru,
     zoom: 17,
-    scrollwheel: false,
     styles: [
         {
             "featureType": "administrative",
