@@ -162,3 +162,11 @@
     margin-left: rem(20px);
     transition: .3s;
 }
+
+.order-form_success {
+    color: green;
+}
+
+.order-form_error {
+    color: red;
+}

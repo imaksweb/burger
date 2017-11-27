@@ -796,7 +796,7 @@
                 <div class="container">
                     <div class="section__title">Закажите доставку</div>
                     <div class="form">
-                        <form action="" class="form__elem">
+                        <form action="server.php" method="post" class="form__elem" id="order-form">
                             <div class="form__content">
                                 <div class="form__col">
                                     <div class="form__row">
@@ -804,13 +804,13 @@
                                             <label for="name" class="form__block-title">
                                                 Имя
                                             </label>
-                                            <input type="text" class="form__input" id="name">
+                                            <input type="text" name="name" class="form__input" id="name" required>
                                         </div>
                                         <div class="form__block">
                                             <label for="tel" class="form__block-title">
                                                 Телефон
                                             </label>
-                                            <input type="text" class="form__input" id="tel">
+                                            <input type="text" name="tel" class="form__input" id="tel" required>
                                         </div>
                                     </div>
                                     <div class="form__row">
@@ -818,7 +818,7 @@
                                             <label for="street" class="form__block-title">
                                                 Улица
                                             </label>
-                                            <input type="text" class="form__input" id="street">
+                                            <input type="text" name="street" class="form__input" id="street" required>
                                         </div>
                                     </div>
                                     <div class="form__row">
@@ -826,25 +826,25 @@
                                             <label for="house" class="form__block-title">
                                                 Дом
                                             </label>
-                                            <input type="text" class="form__input" id="house">
+                                            <input type="text" name="house" class="form__input" id="house" required>
                                         </div>
                                         <div class="form__block">
                                             <label for="block" class="form__block-title">
                                                 Корпус
                                             </label>
-                                            <input type="text" class="form__input" id="block">
+                                            <input type="text" name="block" class="form__input" id="block">
                                         </div>
                                         <div class="form__block">
                                             <label for="room" class="form__block-title">
                                                 Квартира
                                             </label>
-                                            <input type="text" class="form__input" id="room">
+                                            <input type="text" name="room" class="form__input" id="room" required>
                                         </div>
                                         <div class="form__block">
                                             <label for="floor" class="form__block-title">
                                                 Этаж
                                             </label>
-                                            <input type="text" class="form__input" id="floor">
+                                            <input type="text" name="floor" class="form__input" id="floor">
                                         </div>
                                     </div>
                                 </div>
@@ -860,17 +860,17 @@
                                     <div class="form__buttons">
                                         <div class="form__row">
                                             <div class="form__buttons-block">
-                                                <input type="radio" name="payment" id="change" value="change" class="form__radio-input visually-hidden">
+                                                <input type="radio" name="pay-option" id="change" value="change" class="form__radio-input visually-hidden">
                                                 <label for="change" class="form__radio-label">Потребуется сдача</label>
                                             </div>
                                             <div class="form__buttons-block">
-                                                <input type="radio" name="payment" id="card" value="card" class="form__radio-input visually-hidden">
+                                                <input type="radio" name="pay-option" id="card" value="card" class="form__radio-input visually-hidden">
                                                 <label for="card" class="form__radio-label">Оплата картой</label>
                                             </div>
                                         </div>
                                         <div class="form__row">
                                             <div class="form__buttons-block">
-                                                <input type="checkbox" name="callback" id="callback" value="call" class="form__radio-input visually-hidden">
+                                                <input type="checkbox" name="callback" id="callback" value="1" class="form__radio-input visually-hidden">
                                                 <label for="callback" class="form__radio-label form__checkbox-label">Не перезванивать</label>
                                             </div>
                                         </div>

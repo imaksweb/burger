@@ -280,8 +280,6 @@ function initMap() {
     
   });
 
-//   google.maps.event.addDomListener(window, 'load', mapGoogle.init);
-
   let icons = {
       position: {
         icon: {
@@ -472,3 +470,47 @@ $(function() {
     });
 
 });
+
+// Order form
+$(function() {
+
+    // Универсальная ф-ция обработки форм
+    let ajaxForm = function (form) {
+        let data = form.serialize(),
+            url = form.attr('action');
+
+        return $.ajax({
+            type: 'POST',
+            url: url,
+            dataType: 'JSON',
+            data: data
+        })
+    };
+    
+    // Обработка события
+    let submitForm = function (e) {
+        console.log('in submitForm');
+        e.preventDefault();
+
+        let form = $(e.target);
+        
+        ajaxForm(form).done(function(msg) {
+            let mes = msg.mes,
+                status = msg.status;
+
+            if (status === 'OK') {
+                form.append('<p class="order-form_success">' + mes + '</p>');
+            } else {
+                form.append('<p class="order-form_error">' + mes + '</p>');
+            }
+        }).fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
+
+    };
+    
+    $('#order-form').on('submit', submitForm);
+
+
+});
+

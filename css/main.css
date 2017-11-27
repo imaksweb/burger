@@ -2847,6 +2847,12 @@ footer {
   -o-transition: .3s;
   transition: .3s; }
 
+.order-form_success {
+  color: green; }
+
+.order-form_error {
+  color: red; }
+
 .contacts {
   position: relative; }
 
