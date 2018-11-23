@@ -3,4 +3,4 @@
 **Студент:** Илья Максимов.
 **Наставник:** Юрий Кучма.
 
-**Демо**: [https://github.com/imaksweb/burger](http://mrburger.maksweb.ru/)
+**Демо**: [https://github.com/imaksweb/burger](https://imaksweb.github.io/burger/)
