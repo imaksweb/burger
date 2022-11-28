@@ -1,6 +1,8 @@
-### Сайт-портфолио с курса "Веб для начинающих"
-#### Школа 'Lofschool', 10/2017
-**Студент:** Илья Максимов.
-**Наставник:** Юрий Кучма.
+# Burger landing
 
-**Демо**: [https://github.com/imaksweb/burger](https://imaksweb.github.io/burger/)
+### Stack:
+ - HTML5
+ - SASS(SCSS)
+ - JS
+
+[DEMO LINK](https://imaksweb.github.io/burger/)
